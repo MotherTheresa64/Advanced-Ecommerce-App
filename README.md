@@ -1,54 +1,64 @@
-# React + TypeScript + Vite
+# 🛍️ Advanced E-Commerce App (React + TypeScript)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a fully functional e-commerce frontend application built with React, TypeScript, Redux Toolkit, and Tailwind CSS. It fetches real product data from the FakeStoreAPI and implements advanced concepts like global state, async queries, filtering, and session persistence.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- ✅ Dynamic product catalog with filtering by category
+- ✅ Uses `React Query` for efficient API fetching/caching
+- ✅ Full shopping cart implementation using `Redux Toolkit`
+- ✅ Cart state is persisted with `sessionStorage`
+- ✅ "Checkout" clears cart state + storage
+- ✅ Responsive, modern UI built with `Tailwind CSS`
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Tech Stack
+
+- **Frontend Framework:** React + Vite + TypeScript
+- **State Management:** Redux Toolkit
+- **Data Fetching:** React Query (`@tanstack/react-query`)
+- **Styling:** Tailwind CSS
+- **API:** [FakeStoreAPI](https://fakestoreapi.com/)
+
+---
+
+## 📁 Folder Structure
+
+src/
+├── api/ # API request helpers
+├── components/ # Reusable UI components
+├── features/
+│ └── cart/ # Redux slice + selectors
+├── pages/ # Home + Checkout views
+├── types/ # TypeScript interfaces
+├── App.tsx # Routes + Layout
+├── main.tsx # App entry
+└── index.css # Tailwind directives
+
+
+---
+
+## 🧪 How to Run Locally
+
+1. **Clone the repo**
+
+```bash
+git clone https://github.com/MotherTheresa64/Advanced-Ecommerce-App.git
+cd Advanced-Ecommerce-App
 ```
+## Install dependencies
+npm install
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Start the dev server
+npm run dev
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+✅ Status
+✅ Complete – Fully meets the assignment requirements from Coding Temple’s Frontend Specialization Module. Technically part 1 of 2
+📅 Date Submitted: June 17, 2025
+🧑‍💻 Built by: @MotherTheresa64
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+📝 License
+This project is part of a Coding Temple curriculum module and is submitted for educational use.
